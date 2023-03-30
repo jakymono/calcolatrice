@@ -1,4 +1,7 @@
 # calcolatrice
+import os
+
+
 def main():
     menu = """scegliere l'operazione:
     1. somma
@@ -8,34 +11,48 @@ def main():
     5.potenza
     6.pulisci risultato
     7.fine"""
-    tot = input("inserire il primo numero")
+    tot = inputnumeroint("inserire il primo numero")
     while True:
-        scelta = input(menu)
+        os.system("CLS")
+        print(tot)
+        scelta = inputnumeroint(menu)
         match scelta:
             case 1:
-                y = input("inserire nuovo il numero")
+                y = inputnumeroint("inserire nuovo il numero")
                 tot = somma(tot,y)
             case 2:
-                y = input("inserire il nuovo numero")
+                y = inputnumeroint("inserire il nuovo numero")
                 tot = sottrazione(tot,y)
             case 3:
-                y = input("inserire il nuovo numero")
+                y = inputnumeroint("inserire il nuovo numero")
                 tot = divisione(tot,y)
             case 4:
-                y = input("inserire il nuovo numero")
+                y = inputnumeroint("inserire il nuovo numero")
                 tot = moltiplicazione(tot,y)
             case 5:
-                y = input("inserire il nuovo numero")
+                y = inputnumeroint("inserire il nuovo numero")
                 tot = potenza(tot,y)
             case 6:
                 tot = 0
-                tot = input("inserire il primo numero")
+                tot = inputnumeroint("inserire il primo numero")
             case 7:
                 print("arivederci")
                 break
             case _:
                 print("inserito numero non valido")
         input("premere un tasto per continuare..")
+        
+
+def inputnumeroint(st):
+#controllo dell imput
+    while True:
+        try:
+            print(st)
+            n = int(input(" :   "))
+            break
+        except:
+            print("qualcosa è andato storto riprovare...")
+    return n  
         
         
         
@@ -49,11 +66,11 @@ def potenza(x,y):
 	return x**y
 #roberto
 def divisione(x,y):
-    somma=y/x
+    somma=x/y
     return somma
 
 def moltiplicazione(x,y):
-    somma=y*x
+    somma=x*y
     return somma
 
 main()
