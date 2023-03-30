@@ -39,14 +39,21 @@ def main():
         
         
         
-#calcolatrice
+#alessando
 def somma(x,y):
 	return x+y
+  
 def sottrazione(x,y):
 	return x-y
 def potenza(x,y):
 	return x**y
+#roberto
+def divisione(x,y):
+    somma=y/x
+    return somma
+
+def moltiplicazione(x,y):
+    somma=y*x
+    return somma
 
 main()
-
-
