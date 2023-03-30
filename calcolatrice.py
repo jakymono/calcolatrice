@@ -36,4 +36,17 @@ def main():
             case _:
                 print("inserito numero non valido")
         input("premere un tasto per continuare..")
+        
+        
+        
+#calcolatrice
+def somma(x,y):
+	return x+y
+def sottrazione(x,y):
+	return x-y
+def potenza(x,y):
+	return x**y
+
+main()
+
 
