@@ -41,6 +41,7 @@ def main():
             case _:
                 print("inserito numero non valido")
         input("premere un tasto per continuare..")
+        
 
 def inputnumeroint(st):
 #controllo dell imput
